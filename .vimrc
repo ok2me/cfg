@@ -1,3 +1,15 @@
+set nocompatible
+set shell=bash\ -l
+set path=**
+set shiftwidth=4 "indenting is 4 spaces (should be the same as softtabstop for consistency)
+set hidden " Allow to write to buffer without writing to disk
+set backspace=eol,start,indent
+set title
+let g:netrw_keepdir= 2
+set softtabstop=4
+set expandtab
+set noswapfile
+set guifont=DejaVu\ Sans:s12
 set paste
 set pastetoggle=<F2>
 set rnu
@@ -5,6 +17,16 @@ set number
 set t_Co=256        	"set colors to 256
 syntax enable		"use syntax highlighting
 
+" --- convert selected text from markdown to HTML ---
+vnoremap <silent> <leader>md :! mdown<CR>
+function! SanitizeMdown()
+    %s/<\/\?p>//
+	%s/<br \?\/\?>/ /
+    %s/<pre><code>/<pre class="brush:js">\r/
+    %s/<\/code><\/pre>/<\/pre>/
+endfunc
+noremap <silent> <leader>mds :call SanitizeMdown()<CR>
+	
 "Pathogen
 execute pathogen#infect()
 syntax on
