@@ -21,6 +21,8 @@ function! SanitizeMdown()
     %s/<\/code><\/pre>/<\/pre>/
 endfunc
 noremap <silent> <leader>mds :call SanitizeMdown()<CR>
+
+" nnoremap ; : removes need for <shift>:
 noremap ; :
 noremap : ;
 
