@@ -21,6 +21,8 @@ function! SanitizeMdown()
     %s/<\/code><\/pre>/<\/pre>/
 endfunc
 noremap <silent> <leader>mds :call SanitizeMdown()<CR>
+noremap ; :
+noremap : ;
 
 " --- format JavaScript source code using esformatter --
 
