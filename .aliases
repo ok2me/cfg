@@ -125,4 +125,4 @@ alias graph='config log --all --decorate --oneline --graph'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
-alias config='/usr/bin/git --git-dir=/Users/omar/.cfg/ --work-tree=/Users/omar'
+alias config='/usr/bin/git --git-dir=/Users/omar/.cfg/ --work-tree=/Users/$USER'
