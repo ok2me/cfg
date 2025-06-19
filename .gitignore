@@ -1,0 +1,28 @@
+# Ignore caches, system stuff
+.DS_Store
+.Trash
+.cache/
+.local/
+Library/
+Downloads/
+Movies/
+Music/
+Pictures/
+Public/
+.vscode/
+npm-debug.log
+python_history
+python*.log
+
+# Ignore sensitive or user-specific files
+.ssh/
+.zhistory
+.zsh_history
+.bash_history
+.lesshst
+.wget-hsts
+.viminfo
+.zsh_sessions/
+.zcompdump*
+Private 
+.private
